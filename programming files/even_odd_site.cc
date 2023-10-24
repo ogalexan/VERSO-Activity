@@ -21,8 +21,10 @@ int main() {
     // Close table tags and close the file 
     file << "</table>\n</body>\n</html>";
     file.close();
+    // Return pointer to underlying stream buffer
     ifstream input("numbers.html");
     cout << input.rdbuf();
+    // Close file
     input.close();
     return 0;
 }
